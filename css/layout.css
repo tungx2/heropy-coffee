@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+body{
+    width: 100%;
+}
+/* 헤더 */
+header{
+    position: fixed; top: 0px;
+    width: 100%;
+    background-color: royalblue !important;
+    z-index: 99;
+    border-bottom: 1px solid #c8c8c8;
+}
+header .inner{
+    width: 1100px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    /* background-color: orange; */
+}
+header .inner h1{
+    padding-top: 22.5px;
+}
+header .sub_mnu{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    display: flex;
+}
+header .sub_mnu ul{
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+header .sub_mnu ul li{
+    position: relative;
+}
+
+header .sub_mnu ul li::after{
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+header .sub_mnu ul li:first-child:after{
+    display: none;
+}
+header .sub_mnu ul li a{
+    padding: 11px 16px;
+    display: block;
+    font-size: 13px;
+}
+header .sub_mnu .search{
+    position: relative;
+    height: 34px;
+}
+header .sub_mnu .search input{
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    font-size: 12px;
+    transition: width .4s;
+}
+header .sub_mnu .search input:focus{
+    width: 190px;
+    background-color: #ea9926;
+}
+
+/* label로 묶거나 책 274p js활용 보기 */
+header .sub_mnu .search label{
+    cursor: pointer;
+}
+header .sub_mnu .search label .material-icons{
+    height: 24px;
+    transform: translate(-33px, 10px);
+    /* top: 0;
+    right: 5px;
+    margin: auto; */
+    transition: 0.4s;
+}
+header .sub_mnu .search input:focus + label>.material-icons{
+    opacity: 0;
+}
+
+/* 메인메뉴 */
+.gnb{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+}
+.gnb>ul{
+    display: flex;
+}
+.gnb>ul>li{
+    /* padding: 10px 20px 34px 20px;
+    border-radius: 6px 6px 0px;
+    display: block; */
+}
+.gnb>ul>li>a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Arial,sans-serif;
+    padding: 10px 20px 34px 20px;
+    border-radius: 6px 6px 0 0;
+    display: block;
+}
+.gnb>ul>li:hover>a{
+
+    color: #ea9926;
+    background-color: #2c2a29;
+}
+/* gnb sub mnu */
+.gnb .sub{
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.gnb ul li .item__contents{
+    background-color: orange;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+.gnb ul li:hover .item__contents{
+    display: block;
+}
+.gnb .item__contents .contents__menu{
+    background-color: #2c2a29;
+}
+.gnb .item__contents .contents__menu>.sub{
+    padding: 20px 0;
+    display: flex;
+}
+.gnb .item__contents .sub li{
+    width: 220px;
+}
+.gnb .item__contents .sub li h4{
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #fff;
+}
+.gnb .item__contents .sub li ul{}
+.gnb .item__contents .sub li ul li{padding: 5px 0;}
+.gnb .item__contents .sub li ul li a{
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+.gnb .item__contents .sub li ul li:hover a{
+    color: #ea9926;
+}
+.gnb .item__contents .contents__texture{
+    padding: 26px 0;
+    font-size: 12px;
+    background-image: url("../images/main_menu_pattern.jpg");
+}
+.gnb .item__contents .contents__texture h4{
+    color: #999;
+    font-weight: 900;
+}
+.gnb .item__contents .contents__texture p{
+    color: #ea9926;
+    margin: 4px 0 14px;
+}
+
+/* 메인 */
+/* main{width: 1100px; margin: 0px auto;} */
+.visual{
+    height: 640px;
+    background: #333;
+}
+.notice{
+    height: 60px;
+    background: #222;
+}
+.slide{
+    height: 660px;
+    background: #ccc;
+}
+.rewards{
+    height: 240px;
+    background: #aaa;
+}
+.youtube{
+    height: 700px;
+    background: #333;
+}
+.blend{
+    height: 400px;
+    background: #ccc;
+}
+.resurve0{
+    height: 400px;
+    background: #222;
+}
+.favorite{
+    height: 710px;
+    background: #aaa;
+}
+.b_intro{
+    height: 600px;
+    background: #333;
+}
+.f_store{
+    height: 400px;
+    background-color: #ccc;
+}
+
+/* 푸터 */
+footer{
+    height: 470px;
+    background-color: #222 !important;
+}
