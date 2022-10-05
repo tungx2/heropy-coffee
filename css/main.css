@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+main{}
+
+.badges{
+    width: 130px;
+    position: fixed;
+    right: 5px;
+    top: 130px;
+    z-index: 10;
+}
+.badges>a>img{
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.2);
+    margin-bottom: 12px;
+}
+
+/* 버튼 */
+.detail_btn{
+    width: 130px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    transition: 0.4s;
+    color: #333;  
+    transform: translateX(150px);
+}
+.detail_btn:hover{
+    background-color: #333;
+    color: #fff;
+}
+.detail_btn.btn--brown{
+    color: #592b18;
+    border-color: #592b18;
+}
+.detail_btn.btn--brown:hover{
+    color: #fff;
+    background-color: #592b18;
+}
+/* 비주얼 */
+.visual{
+    background-image: url("../images/visual_bg.jpg");
+}
+.visual .inner{
+    width:1100px;
+    height: 646px;
+    margin: 0px auto;
+    position: relative;
+}
+.title, .cup1, .cup2, .spoon{
+    position: absolute;
+}
+.visual .title{
+    top: 40px;
+    left: -10px;
+}
+.visual .cup1.image{
+    bottom: 0px;
+    right: -47px;
+}
+.visual .cup1.text{
+    top: 40px;
+    right: 60px;
+}
+.visual .cup2.image{
+    bottom: 0;
+    right: 162px;
+}
+.visual .cup2.text{
+    top: 186px;
+    right: 412px;
+}
+.visual .spoon{
+    bottom: 0;
+    left: 275px;
+}
+
+.fadeIn{
+    opacity: 0;
+}
+.notice{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 61.3%, rgba(246,245,239,1) 61.3%);
+}
+.notice .inner{
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.notice .inner .inner__left{
+    width: 70%;
+    height: 62px;
+    position: absolute;
+    background-color: #333;
+    overflow: hidden;
+    align-items: center;
+}
+.notice .inner .inner__left h2{
+    color: #fff;
+    font-size: 17px;
+    margin-right: 20px;
+    position: absolute;
+    line-height: 62px;
+}
+.notice .inner .inner__left>a{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    text-align: center;
+}
+.notice .inner .inner__left a span{
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    color: #fff;
+}
+.notice .inner .inner__right{
+    width: 30%;
+    height: 62px;
+    /* border: 3px solid #00f;
+    box-sizing: border-box; */
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice .inner .inner__right h2{
+    width: 120px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* promotion */
+.promotion{
+    display: flex;
+    justify-content: center;
+    background-color: #f6f5ef;
+    overflow: hidden;
+    position: relative;
+}
+.promotion .swiper{
+    /* 819px 슬라이드 3개 && 여백 10px 2개= 2477px */
+    width: calc(819px * 3 + 10px * 2);
+    height: 653px;
+    flex-shrink: 0;
+}
+.promotion .swiper .swiper-wrapper .swiper-slide{
+    position: relative;
+    opacity: .5;
+    transition: opacity 1s;
+}
+.promotion .swiper .swiper-wrapper .swiper-slide-active{
+    opacity: 1;
+}
+.promotion .swiper .swiper-wrapper .swiper-slide .detail_btn{
+    position: absolute;
+    bottom: 110px;
+    left: 200px;
+    margin: auto;
+}
+.promotion .swiper .swiper-button-prev,
+.promotion .swiper .swiper-button-next{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    color: #333;
+    top: 300px
+}
+
+.promotion .swiper-pagination{
+    bottom: 20px;
+    z-index: 1;
+}
+.promotion .swiper-pagination .swiper-pagination-bullet{
+    background-color: transparent;
+    background-image: url("../images/promotion_slide_pager.png");
+    width: 13px;
+    height: 12px;
+    margin-right: 6px;
+}
+.promotion .swiper-pagination .swiper-pagination-bullet:last-child{
+    margin-right: 0px;
+}
+.promotion .swiper-pagination .swiper-pagination-bullet-active{
+    background-image: url(../images/promotion_slide_pager_on.png);
+}
+
+.promotion .swiper .swiper-button-prev{
+    left: 50%;
+    margin-left: -480px;
+}
+.promotion .swiper .swiper-button-next{
+    right: 50%;
+    margin-right: -480px;
+}
+.promotion .swiper .swiper-button-prev::after,
+.promotion .swiper .swiper-button-next::after{
+    display: none;
+}
+.promotion .swiper .swiper-button-prev:hover,
+.promotion .swiper .swiper-button-next:hover{
+    color: #fff;
+    background-color: #333;
+}

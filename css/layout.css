@@ -1,4 +1,5 @@
 @charset "utf-8";
+.visual h2, .notice>h2, .promotion>h2{display: none;}
 
 body{
     width: 100%;
@@ -7,7 +8,7 @@ body{
 header{
     position: fixed; top: 0px;
     width: 100%;
-    background-color: royalblue !important;
+    background-color: #fff !important;
     z-index: 99;
     border-bottom: 1px solid #c8c8c8;
 }
@@ -175,15 +176,16 @@ header .sub_mnu .search input:focus + label>.material-icons{
 }
 
 /* 메인 */
-/* main{width: 1100px; margin: 0px auto;} */
-.visual{
-    height: 640px;
-    background: #333;
-}
+main{margin-top: 120px;}
+
+.visual{height: 646px;}
+
+/* 공지 */
 .notice{
-    height: 60px;
-    background: #222;
+    height: 62px;
 }
+
+
 .slide{
     height: 660px;
     background: #ccc;

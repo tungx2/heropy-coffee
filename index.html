@@ -20,20 +20,38 @@
     <meta property="twitter:url" content="https://epic-darwin-271c77.netlify.app" />
     <title>Heropy Coffee</title>
     <!-- 아이콘 폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    
     <!-- 레이아웃(헤더,푸터) -->
     <link rel="stylesheet" href="./css/layout.css" type="text/css">
+
     <!-- 초기화 -->
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
     <!-- 공통서식 -->
     <link rel="stylesheet" href="./css/base.css" type="text/css">
+
+    <!-- 스와이퍼 슬라이드 css -->
+    <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <!-- 메인서식 -->
     <link rel="stylesheet" href="./css/main.css" type="text/css">
+
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
     <!-- 프리픽스 -->
     <script src="./js/prefixfree.min.js"></script>
+
+    <!-- 부드러운 애니메이션 -->
+    <script script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 메인 스크립트 -->
+    <script src="./js/main.js" defer></script>
+
+
 </head>
 <body>
     <!-- 헤더 시작 -->
@@ -369,17 +387,115 @@
 
     <!-- 메인 시작 -->
     <main>
+
+      <!-- visual -->
     <section class="visual">
-        <h2>비쥬얼</h2>
+        <h2>메인비쥬얼</h2>
+        <div class="inner">
+          
+          <div class="title fadeIn">
+            <img src="./images/visual_title.png" alt="title img">
+            <a href="" title="자세히보기" class="detail_btn btn--brown">자세히 보기</a>
+          </div>
+
+          <div class="fadeIn">
+            <img src="./images/visual_cup1.png" alt="cup1" class="cup1 image">
+            <img src="./images/visual_cup1_text.png" alt="cup1" class="cup1 text">
+          </div>
+
+          <div class="fadeIn">
+            <img src="./images/visual_cup2.png" alt="cup2 img" class="cup2 image">
+            <img src="./images/visual_cup2_text.png" alt="cup2 text" class="cup2 text">
+          </div>
+
+          <div class="fadeIn">
+            <img src="./images/visual_spoon.png" alt="spoon img" class="spoon">
+          </div>
+
+        </div>
     </section>
 
+    <!-- notice -->
     <section class="notice">
         <h2>공지사항</h2>
+        <div class="inner">
+          <div class="inner__left">
+            <h2>공지사항</h2>
+            <!-- Swiper -->
+            <div class="swiper notice_slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" title="">크리스마스 & 연말연시 매장 영업시간 변경 안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" title="">[당첨자 발표] 커피 영수증 이벤트</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" title="">애플리케이션 버전 업데이트 안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" title="">[당첨자 발표] 전자영수증 이벤트</a>
+                </div>
+              </div>
+            </div>
+            <a href="javascript:void(0)">
+              <span class="material-icons">add_circle</span>
+            </a>
+          </div>
+
+          <div class="inner__right">
+            <h2>커피 프로모션</h2>
+            <span class="material-icons">upload</span>
+          </div>
+        </div>
     </section>
 
-    <section class="slide">
-        <h2>슬라이드</h2>
+    <!-- promotion -->
+    <section class="promotion">
+      <h2>프로모션</h2>
+      <div class="swiper promotion_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="./images/promotion_slide1.jpg" alt="">
+              <a href="javascript:void(0)" title="프로모션1" class="detail_btn">
+                자세히 보기
+              </a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide2.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션2" class="detail_btn">
+              자세히 보기
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide3.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션3" class="detail_btn">
+              자세히 보기
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide4.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션4" class="detail_btn">
+              자세히 보기
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide5.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션5" class="detail_btn">
+              자세히 보기
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+          <span class="material-icons">arrow_back</span>
+        </div>
+        <div class="swiper-button-next">
+          <span class="material-icons">arrow_forward</span>
+        </div>
+      </div>
     </section>
+
 
     <section class="rewards">
         <h2>리워드</h2>
@@ -408,12 +524,54 @@
     <section class="f_store">
         <h2>매장찾기</h2>
     </section>
-    
+    <!-- badges  -->
+    <aside class="badges">
+      <a href="" title="디저트 50% 할인">
+        <img src="./images/badge1.jpg" alt="디저트할인 전역배지">
+      </a>
+      <a href="" title="골드 회원가입">
+        <img src="./images/badge2.jpg" alt="골드 회원가입 전역배지">
+      </a>
+    </aside>
     </main>
 
     <!-- 푸터 시작 -->
     <footer>
 
     </footer>
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.notice_slide', {
+        direction: "vertical",
+        autoplay: true,
+        loop: true,
+      });
+
+      new Swiper('.promotion_slide', {
+        // direction: "horizontal",
+        autoplay: true,
+        loop: true,
+        slidesPerView:3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable:true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+    </script>
 </body>
 </html>
