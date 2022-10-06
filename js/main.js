@@ -30,3 +30,19 @@ fadeEl.forEach(function(fadeEl, index){
         opacity: 1
     });
 });
+
+// 커피프로모션 토글 아이콘 클릭시 박스 open/close
+// const 변하지않는 let 변하는
+const promotionEl= document.querySelector('section.promotion');
+const toggleEl= document.querySelector('.toggle_btn');
+
+//토글버튼 글릭시 프로모션 높이 변경
+toggleEl.addEventListener('click', function(){
+    if(promotionEl.classList.contains('hide')){ //만약에 promotion클래스에 .hide가 있다면 (0인 상태에서 누르니까)
+        // 높이가 663이 되어야함
+        promotionEl.classList.remove('hide');
+    }else{ //promotion 클래스에 hide가 없다면
+        //.hide추가
+        promotionEl.classList.add('hide');
+    }
+});

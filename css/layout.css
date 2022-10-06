@@ -1,5 +1,16 @@
 @charset "utf-8";
-.visual h2, .notice>h2, .promotion>h2{display: none;}
+.visual h2,
+.notice>h2,
+.promotion>h2,
+.rewards>h2,
+.rewards>.inner>h2,
+.youtube>h2,
+.season-product>h2,
+.reserve>h2,
+.favorite>h2,
+.reserve_store>h2,
+.f_store>h2
+{display: none;}
 
 body{
     width: 100%;
@@ -73,7 +84,7 @@ header .sub_mnu .search input{
 }
 header .sub_mnu .search input:focus{
     width: 190px;
-    background-color: #ea9926;
+    /* background-color: #ea9926; */
 }
 
 /* label로 묶거나 책 274p js활용 보기 */
@@ -191,32 +202,26 @@ main{margin-top: 120px;}
     background: #ccc;
 }
 .rewards{
-    height: 240px;
-    background: #aaa;
+    height: 241px;
 }
 .youtube{
+    width: 100%;
     height: 700px;
-    background: #333;
 }
-.blend{
+.season-product{
     height: 400px;
-    background: #ccc;
 }
-.resurve0{
-    height: 400px;
-    background: #222;
+.reserve{
+    height: 400px; 
 }
 .favorite{
-    height: 710px;
-    background: #aaa;
+    background-image: url("../images/favorite_bg.jpg");
 }
-.b_intro{
-    height: 600px;
-    background: #333;
+.reserve_store{
+    background-image: url("../images/reserve_store_bg.jpg");
 }
 .f_store{
-    height: 400px;
-    background-color: #ccc;
+    background-image: url("../images/find_store_bg.jpg");
 }
 
 /* 푸터 */
