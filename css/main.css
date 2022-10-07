@@ -340,7 +340,7 @@ main{}
 @keyframes m_img01{
     0%{transform: translateY(0px);}
     50%{transform: translateY(15px);}
-    100%{transform: translateY(0px)};
+    100%{transform: translateY(0px);}
 }
 @keyframes m_img02{
     0%{transform: translateY(15px);}
