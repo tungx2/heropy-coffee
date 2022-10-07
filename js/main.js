@@ -1,5 +1,6 @@
  
  const badgeEl= document.querySelector('.badges');
+ const topBtnEl= document.querySelector('.top_btn');
 
  window.addEventListener('scroll', function(){
     console.log(window.scrollY);
@@ -9,14 +10,27 @@
             opacity: 0,
             display: 'none'
         });
+        gsap.to(topBtnEl,0.6, {
+            opacity: 1,
+        });
     }else{
         // badgeEl.style.display= 'block';
         gsap.to(badgeEl,0.6, {
             opacity: 1,
-            display: 'block'
+            dispalay: 'block'
+        });
+        gsap.to(topBtnEl,0.6, {
+            opacity: 0,
         });
     }
  })
+
+topBtnEl.addEventListener('click', function() {
+    gsap.to(window, .6, {
+        scrollTo: 0
+    })
+})
+
 
 //  gsap.to(요소,시간,속성)
 
@@ -46,3 +60,21 @@ toggleEl.addEventListener('click', function(){
         promotionEl.classList.add('hide');
     }
 });
+
+// coffee blend, reserve, favorite,find store 콘텐츠가 80% 지점에 보일 때 동작하는 스크립트
+const spyEl= document.querySelectorAll('section.scroll-spy');
+
+spyEl.forEach(function(spyEl){
+    new ScrollMagic
+    .Scene({ //감시할 장면 추가
+        triggerElement:spyEl, //보여질 여부를 감시할 요소를 지정
+        triggerHook:0.8 //화면의 80%지점에서 동작
+    })
+    .setClassToggle(spyEl,'show') //show 클랙스를 적용하거나 해제하기
+    .addTo(new ScrollMagic.Controller()); //컨트롤러에 장면을 할당한다. 
+})
+
+
+// 푸터 카피라이트 연도
+const thisYear= document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
